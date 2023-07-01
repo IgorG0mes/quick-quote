@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_01_212232) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_01_214743) do
   create_table "clients", force: :cascade do |t|
     t.string "name"
     t.string "document_cpf"
@@ -21,6 +21,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_01_212232) do
     t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "comissions", force: :cascade do |t|
+    t.integer "order_id", null: false
+    t.integer "user_id", null: false
+    t.float "amount"
+    t.boolean "payed"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["order_id"], name: "index_comissions_on_order_id"
+    t.index ["user_id"], name: "index_comissions_on_user_id"
   end
 
   create_table "order_items", force: :cascade do |t|
@@ -77,6 +88,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_01_212232) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "comissions", "orders"
+  add_foreign_key "comissions", "users"
   add_foreign_key "order_items", "orders"
   add_foreign_key "order_items", "products"
   add_foreign_key "orders", "clients"

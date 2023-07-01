@@ -4,4 +4,5 @@ class Order < ApplicationRecord
 
   has_many :order_items
   has_many :product, through: :order_items
+  has_one :comission
 end

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @comission %>
+
+<div>
+  <%= link_to "Edit this comission", edit_comission_path(@comission) %> |
+  <%= link_to "Back to comissions", comissions_path %>
+
+  <%= button_to "Destroy this comission", @comission, method: :delete %>
+</div>
