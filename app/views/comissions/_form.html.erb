@@ -1,0 +1,37 @@
+<%= form_with(model: comission) do |form| %>
+  <% if comission.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(comission.errors.count, "error") %> prohibited this comission from being saved:</h2>
+
+      <ul>
+        <% comission.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :order_id, style: "display: block" %>
+    <%= form.text_field :order_id %>
+  </div>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.label :amount, style: "display: block" %>
+    <%= form.text_field :amount %>
+  </div>
+
+  <div>
+    <%= form.label :payed, style: "display: block" %>
+    <%= form.check_box :payed %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
