@@ -6,7 +6,6 @@ class AppConfigurationsController < ApplicationController
   end
 
   def update
-    # debugger
     key = params[:key]
     value = params[:key_value][key]
     AppConfiguration.update(key, value)
