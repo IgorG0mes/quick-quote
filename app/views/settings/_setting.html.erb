@@ -1,0 +1,8 @@
+<div id="<%= dom_id setting %>">
+  <%= form_with(model: setting) do |form| %>
+      <%= setting.key %>
+      <%= form.text_field :value %>
+      <%= submit_tag "Salvar" %>
+      <%= link_to 'Editar', edit_setting_path(setting) %>
+    <% end %>
+</div>
