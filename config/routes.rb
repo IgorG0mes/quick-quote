@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :settings
   resources :comissions
   resources :order_items
   resources :orders
