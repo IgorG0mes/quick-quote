@@ -1,7 +1,7 @@
 
 FactoryBot.define do
   factory :supplier do
-    name { Forgery(:name).full_name }
-    document_cnpj { Forgery(:basic).text }
+    name { Forgery(:name).company_name }
+    document_cnpj { '00123123000112' }
   end
 end
