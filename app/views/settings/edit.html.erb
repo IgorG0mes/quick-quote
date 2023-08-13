@@ -1,0 +1,10 @@
+<h1>Editing setting</h1>
+
+<%= render "form", setting: @setting %>
+
+<br>
+
+<div>
+  <%= button_to "Destroy this setting", @setting, method: :delete %> |
+  <%= link_to "Back to settings", settings_path %>
+</div>
