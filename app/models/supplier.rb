@@ -3,4 +3,5 @@ class Supplier < ApplicationRecord
 
   validates :name, presence: true
   validates :document_cnpj, presence: true
+  validates :document_cnpj, numericality: { only_integer: true }
 end

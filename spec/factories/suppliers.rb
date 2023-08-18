@@ -1,7 +1,7 @@
 
 FactoryBot.define do
   factory :supplier do
-    name { Forgery(:name).company_name }
-    document_cnpj { '00123123000112' }
+    name { Faker::Name.name }
+    document_cnpj { Faker::Number.number(digits: 14) }
   end
 end
