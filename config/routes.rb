@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resources :users
   resources :products
   resources :suppliers
+
+  root "home#index"
 end
