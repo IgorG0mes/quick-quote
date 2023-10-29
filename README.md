@@ -3,7 +3,7 @@
 ## Presentation
 Quick Quote serves as a platform for quoting your services and ensuring efficient cost organization. As a SaaS solution meticulously crafted to streamline and simplify your service quotation process, it enables you to input customer information and itemize the value of products and services.
 
-## System Requirements
+## Software Specifications
 * Ruby Version **3.2.2**
 * Rails Version **7.0.6**
 * SQLite Version **3.39.5** 
