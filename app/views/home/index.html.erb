@@ -1,4 +1,14 @@
 
 <h1>Home</h1>
 
-<p>Welcome to QuickQuote!</p>
+<p> <%=@welcome %> </p>
+
+<div>
+  <%= link_to "Ver todos clientes", clients_path %>
+  <%= link_to "Ver todos Colaboradores", users_path %>
+  <%= link_to "Ver todos Pedidos", orders_path %>
+</div>
+<div>
+  <%= link_to "Ver todos Produtos", orders_path %>
+  <%= link_to "Ver todos Fornecedores", suppliers_path %>
+</div>

@@ -1,10 +1,16 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @order %>
+<div>
+  <p>Número do Pedido: <%= @order.id %></p>
+  <p>Nome do Cliente: <%= @order.client.name %></p>
+  <p>Nome do Mecânico: <%= @order.user.name %></p>
+  <p>Valor da mão de obra: <%= @order.labor_price %></p>
+  <p>Valor total do serviço: <%= @order.amount %></p>
+</div>
 
 <div>
-  <%= link_to "Edit this order", edit_order_path(@order) %> |
-  <%= link_to "Back to orders", orders_path %>
+  <%= link_to "Editar este pedido", edit_order_path(@order) %> |
+  <%= link_to "Voltar a todos pedidos", orders_path %>
 
-  <%= button_to "Destroy this order", @order, method: :delete %>
+  <%= button_to "Destruir este pedido!", @order, method: :delete %>
 </div>

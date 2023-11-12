@@ -4,11 +4,16 @@
 
 <div id="orders">
   <% @orders.each do |order| %>
-    <%= render order %>
     <p>
-      <%= link_to "Show this order", order %>
+      Número do pedido: <%= order.id %>
+    </p>
+    <p>
+      Nome do Cliente: <%= order.client.name %>
+    </p>
+    <p>
+      <%= link_to "Detalhes do pedido", order %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New order", new_order_path %>
+<%= link_to "Novo pedido", new_order_path %>
