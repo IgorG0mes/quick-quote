@@ -3,6 +3,7 @@
   <head>
     <title>QuickQuote</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,6 +12,19 @@
   </head>
 
   <body>
+    <div class="top_bar">
+      <div class="container">
+        <%= link_to "/" do %>
+          <%= image_tag("qq_logo.png", alt: "Logo QQ") %>
+        <% end %>
+        <a id="nav-links"><%= link_to "/" do %>Início<% end %></a>
+        <a id="nav-links"><%= link_to "/orders" do %>Pedidos<% end %></a>
+        <a id="nav-links"><%= link_to "/clients" do %>Clientes<% end %></a>
+        <a id="nav-links"><%= link_to "/users" do %> Colaboradores <% end %></a>
+        <a id="nav-links"><%= link_to "/products" do %> Produtos <% end %></a>
+        <a id="nav-links"><%= link_to "/suppliers" do %> Fornecedores <% end %></a>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>
