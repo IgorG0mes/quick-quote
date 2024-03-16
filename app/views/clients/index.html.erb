@@ -1,14 +1,9 @@
-<p style="color: green"><%= notice %></p>
+<%= stylesheet_link_tag 'index_client' %>
 
-<h1>Clients</h1>
-
-<div id="clients">
-  <% @clients.each do |client| %>
-    <%= render client %>
-    <p>
-      <%= link_to "Show this client", client %>
-    </p>
-  <% end %>
+<div class="developing">
+  <%= image_tag("developing.png", alt: "image")%>
 </div>
-
-<%= link_to "New client", new_client_path %>
+<div class="text">
+  <h2>Em desenvolvimento!</h2>
+  <p>Brevemente teremos novas atualizações</p>
+</div>

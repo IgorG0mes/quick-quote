@@ -1,14 +1,29 @@
-<p style="color: green"><%= notice %></p>
+<%= stylesheet_link_tag 'index_supplier.css' %>
 
-<h1>Suppliers</h1>
-
-<div id="suppliers">
-  <% @suppliers.each do |supplier| %>
-    <%= render supplier %>
-    <p>
-      <%= link_to "Show this supplier", supplier %>
-    </p>
-  <% end %>
+<div class="viewable">
+  <div class="search_bar">
+    <div class="box_bar">
+      <div class="title-search">
+        <p>Nome do fornecedor</p>
+      </div>
+      <div class="box-search">
+        <%= form_tag(suppliers_path, method: :get, data: { turbo_frame: "results", turbo_action: "advance" }) do %>
+          <%= text_field_tag :query_name, params[:query_name], class: "searchTerm" %>
+          <%= submit_tag "Buscar", class: "searchButton" %>
+        <% end %>
+      </div>
+    </div>
+    <div class="box_bar">
+      <div class="title-search">
+        <p>Telefone ou CNPJ do fornecedor</p>
+      </div>
+      <div class="box-search">
+        <%= form_tag(suppliers_path, method: :get, data: { turbo_frame: "results", turbo_action: "advance" }) do %>
+          <%= text_field_tag :query_cnpj, params[:query_cnpj], class: "searchTerm" %>
+          <%= submit_tag "Buscar", class: "searchButton" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
-
-<%= link_to "New supplier", new_supplier_path %>
+<%= render "search_result" %>

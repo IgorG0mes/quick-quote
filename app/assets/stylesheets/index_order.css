@@ -1,0 +1,14 @@
+
+.developing{
+  display: flex;
+  justify-content: center;
+}
+
+img{
+  width: 16em;
+  height: auto;
+}
+
+.text{
+  text-align: center;
+}

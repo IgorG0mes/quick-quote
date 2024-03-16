@@ -1,19 +1,9 @@
-<p style="color: green"><%= notice %></p>
+<%= stylesheet_link_tag 'index_order' %>
 
-<h1>Orders</h1>
-
-<div id="orders">
-  <% @orders.each do |order| %>
-    <p>
-      Número do pedido: <%= order.id %>
-    </p>
-    <p>
-      Nome do Cliente: <%= order.client.name %>
-    </p>
-    <p>
-      <%= link_to "Detalhes do pedido", order %>
-    </p>
-  <% end %>
+<div class="developing">
+  <%= image_tag("developing.png", alt: "image")%>
 </div>
-
-<%= link_to "Novo pedido", new_order_path %>
+<div class="text">
+  <h2>Em desenvolvimento!</h2>
+  <p>Brevemente teremos novas atualizações</p>
+</div>
