@@ -6,7 +6,7 @@ ruby "3.2.2"
 gem "rails", "~> 7.0.5"
 gem "sprockets-rails"
 gem "sqlite3", "~> 1.4"
-gem "puma", "~> 5.0"
+gem "puma"
 gem "importmap-rails"
 gem "turbo-rails"
 gem "stimulus-rails"
@@ -20,6 +20,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'rspec-rails'
+  gem "pry"
 end
 
 group :development do
