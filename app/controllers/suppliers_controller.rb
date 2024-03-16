@@ -3,11 +3,13 @@ class SuppliersController < ApplicationController
 
   # GET /suppliers or /suppliers.json
   def index
-    @suppliers = Supplier.all
+    return @suppliers = Supplier.search_by_name(params[:query_name]) if params[:query_name].present?
+    return @suppliers = Supplier.search_by_cnpj(params[:query_cnpj]) if params[:query_cnpj].present?
   end
 
   # GET /suppliers/1 or /suppliers/1.json
   def show
+    @supplier = Supplier.find(params[:id])
   end
 
   # GET /suppliers/new
