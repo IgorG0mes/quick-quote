@@ -1,1 +1,37 @@
 @import 'bulma';
+
+body{
+  font-family: Gotham, Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #F5F5F5;
+  /* width: 100%; */
+}
+
+.top_bar{
+  height: 7.2em;
+  background-color: #CBCBCB;
+}
+
+.container{
+  text-align: center;
+  position: relative;
+  top: -35%;
+}
+
+.container img {
+  width: 9.8em;
+  transform: translate(0px, 45px);
+}
+
+.container #nav-links{
+  padding: 0px 25px 0px 25px;
+}
+
+a{
+  text-decoration: none;
+  color: #000000;
+}
+
+a:hover {
+  color: #E4A459;
+}
