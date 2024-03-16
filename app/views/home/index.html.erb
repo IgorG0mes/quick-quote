@@ -1,14 +1,9 @@
+<%= stylesheet_link_tag 'index_home' %>
 
-<h1>Home</h1>
-
-<p> <%=@welcome %> </p>
-
-<div>
-  <%= link_to "Ver todos clientes", clients_path %>
-  <%= link_to "Ver todos Colaboradores", users_path %>
-  <%= link_to "Ver todos Pedidos", orders_path %>
+<div class="developing">
+  <%= image_tag("developing.png", alt: "image")%>
 </div>
-<div>
-  <%= link_to "Ver todos Produtos", orders_path %>
-  <%= link_to "Ver todos Fornecedores", suppliers_path %>
+<div class="text">
+  <h2>Em desenvolvimento!</h2>
+  <p>Brevemente teremos novas atualizações</p>
 </div>

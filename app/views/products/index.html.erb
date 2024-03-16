@@ -1,14 +1,9 @@
-<p style="color: green"><%= notice %></p>
+<%= stylesheet_link_tag 'index_product' %>
 
-<h1>Products</h1>
-
-<div id="products">
-  <% @products.each do |product| %>
-    <%= render product %>
-    <p>
-      <%= link_to "Show this product", product %>
-    </p>
-  <% end %>
+<div class="developing">
+  <%= image_tag("developing.png", alt: "image")%>
 </div>
-
-<%= link_to "New product", new_product_path %>
+<div class="text">
+  <h2>Em desenvolvimento!</h2>
+  <p>Brevemente teremos novas atualizações</p>
+</div>
