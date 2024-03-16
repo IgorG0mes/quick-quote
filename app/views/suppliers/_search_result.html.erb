@@ -1,0 +1,19 @@
+<%= stylesheet_link_tag 'search_result' %>
+
+<%= turbo_frame_tag "results" do %>
+  <div class="all_result">
+    <% if @suppliers.present? %>
+      <% @suppliers.each do |supplier| %>
+      <article>
+        <p>Nome: <%= supplier.name %></p>
+        <p>CNPJ: <%= supplier.document_cnpj %></p>
+        <p>Telefone: <%= supplier.phone_number %></p>
+      </article>
+      <% end %>
+    <% elsif @suppliers == [] %>
+      <div class="result">
+        <p>Informação não encontrado</p>
+      </div>
+    <% end %>
+  </div>
+<% end %>
